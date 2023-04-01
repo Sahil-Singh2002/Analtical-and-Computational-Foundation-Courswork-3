@@ -19,6 +19,7 @@ Denote the areas of the square and disc by As and Ad, respectively. Then of cour
  ![Screenshot 2023-04-01 151922](https://user-images.githubusercontent.com/125428501/229294718-a16af7fe-3c14-495f-95bb-5aa3a023477c.png)
  
 **Conclusion**
+
 Both algoritms are designed tp help compute a strong numerical approximation of π. With chudnovsky method deminstrating a rapid convergence to the solution π. In our code we demand a minimum of 1,000 digits precision. 
 
   
