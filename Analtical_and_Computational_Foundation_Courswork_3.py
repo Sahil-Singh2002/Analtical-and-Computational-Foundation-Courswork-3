@@ -2,6 +2,7 @@
 import random
 import sympy
 
+#________________________________________________________________________________
 def estimate_pi_monte_carlo(Ntotal):
     if type (Ntotal) != int or Ntotal <= 0:
         raise ValueError
@@ -16,7 +17,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle,Rectangle
 def draw_monte_carlo(Ntotal):
     fig = plt.figure(figsize =(10,5))
-#_______________________________________________________________________
+#---------------------------------------------------------------
 # Left Subplot for the actual areas of the circle and Rectangle     
     ax = fig.add_subplot(121)
     rect= Rectangle((-1,-1),2,2, color = "red")
