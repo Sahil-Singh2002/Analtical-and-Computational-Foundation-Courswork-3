@@ -1,7 +1,8 @@
-
 import random
 import sympy
-
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle,Rectangle
 #________________________________________________________________________________
 def estimate_pi_monte_carlo(Ntotal):
     if type (Ntotal) != int or Ntotal <= 0:
@@ -9,12 +10,7 @@ def estimate_pi_monte_carlo(Ntotal):
 #The code below is just giving the parameter of the squar to be between -1 and 1 for both height and the base
     points = [(random.uniform(-1,1),random.uniform(-1,1)) for _ in range(Ntotal)]
     return sympy.Rational(4*sum([1 for point in points if point[0]**2 +point[1]**2 <= 1]), Ntotal)    
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-from matplotlib.patches import Circle,Rectangle
+#________________________________________________________________________________
 def draw_monte_carlo(Ntotal):
     fig = plt.figure(figsize =(10,5))
 #---------------------------------------------------------------
@@ -29,7 +25,6 @@ def draw_monte_carlo(Ntotal):
     ax.set_ylabel("y")
     ax.add_patch(cir)
     ax = fig.add_subplot(122)
-#_______________________________________________________________________
 # Estimatation of the Monti carlo aprroximation
     x, y = [random.uniform(-1,1) for _ in range(Ntotal)], [random.uniform(-1,1) for _ in range(Ntotal)]
     xy = zip(x,y)
@@ -40,14 +35,13 @@ def draw_monte_carlo(Ntotal):
     ax.set_xlim(-1,1)
     ax.set_ylabel("y")
     ax.set_ylim(-1,1)
-#_______________________________________________________________________
 #Plot the Two graphs
     fig.suptitle("Monte Carlo Approximation of Pi")
     plt.show()
     fig.savefig('outputimage.png')
 # Call the plotting function
 draw_monte_carlo(250)
-
+#_______________________________________________________________________
 def estimate_pi_chudnovsky(n):
 # Validation of the input
     if type(n) != int or n<= 0:
