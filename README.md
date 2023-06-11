@@ -1,10 +1,12 @@
-# Analtical and Computational 3
+# Estimating $π$
 
 **Introduction**
 
 It is possible to use different methods to compute approximations to $π$. One way is to use the so-called Monte Carlo method which uses random numbers to estimate $π$. Consider the left-hand figure below, which shows the unit disc inscribed in the square $[-1, 1] \times [-1, 1]$. While one of the most efficient algorithms is using the following partial sums bellow. The convergence is very rapid. Versions of this algorithm are used for all record-breaking calculations for digits of $π$. So I wrote two functions which uses these algorithms to approximate $π$. The function should use `SymPy`, return an estimate of $π$ given as a SymPy float with at least 1000 digits precision for the second algorithm.
  
-## Monte Carlo Method
+## Algorithms
+
+$$\textbf{Monte Carlo Method}$$
 
 One way to estimate the value of $π$ is by using the Monte Carlo method, which utilizes random numbers. 
 
@@ -22,9 +24,7 @@ Implementing the Monte Carlo method allows us to estimate $π$ by utilizing rand
 
 To implement the Monte Carlo method, you can use random number generators in your programming language of choice to generate points within the square and determine if they fall within the circle. By keeping track of the count of points inside the circle and the total number of generated points, you can calculate the estimated value of $π$.
 
-
-
-# Chudnovsky Algorithm
+$$\textbf{Chudnovsky Algorithm}$$
 
 The Chudnovsky algorithm is a fast algorithm for computing the digits of $π$. It is based on the following infinite series representation of $π$:
 
