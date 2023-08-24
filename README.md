@@ -2,7 +2,7 @@
 
 **Introduction**
 
-It is possible to use different methods to compute approximations to $π$. One way is to use the so-called Monte Carlo method which uses random numbers to estimate $π$. Consider the left-hand figure below, which shows the unit disc inscribed in the square $[-1, 1] \times [-1, 1]$. While one of the most efficient algorithms is using the following partial sums bellow. The convergence is very rapid. Versions of this algorithm are used for all record-breaking calculations for digits of $π$. So I wrote two functions which uses these algorithms to approximate $π$. The function should use `SymPy`, return an estimate of $π$ given as a SymPy float with at least 1000 digits precision for the second algorithm.
+It is possible to use different methods to compute approximations to $π$. One way is to use the so-called Monte Carlo method which uses random numbers to estimate $π$. Consider the left-hand figure below, which shows the unit disc inscribed in the square $[-1, 1] \times [-1, 1]$. In comparison, one of the most efficient algorithms is using the following partial sums below. The convergence is very rapid. Versions of this algorithm are used for all record-breaking calculations for digits of $π$. So I wrote two functions that uses these algorithms to approximate $π$. The function should use `SymPy`, and return an estimate of $π$ given as a SymPy float with at least 1000 digits precision for the second algorithm.
  
 ## Algorithms
 
@@ -13,7 +13,7 @@ One way to estimate the value of $π$ is by using the Monte Carlo method, which 
 The Monte Carlo method for estimating $π$ involves the following steps:
 
 1. Consider a unit square $[-1, 1] \times [-1, 1]$ that contains a unit circle.
-2. Generate a large number of random points uniformly distributed within the unit square.
+2. Generate many random points uniformly distributed within the unit square.
 3. Determine the number of points that fall within the unit circle.
 4. Calculate the ratio of the number of points inside the circle to the total number of generated points.
 5. Multiply this ratio by 4 to obtain an estimate of $π$.
@@ -36,8 +36,8 @@ The algorithm allows for the efficient computation of $π$ by calculating the te
 
 The Chudnovsky algorithm is known for its rapid convergence and has been used to compute $π$ to billions (and even trillions) of decimal places. It is widely employed in high-precision computations and is one of the most efficient algorithms for calculating $π$.
 
-To implement the Chudnovsky algorithm, you can use a loop or recursion to iterate through the terms of the series and sum them up. Keep in mind that the convergence of the algorithm improves as more terms are added to the sum. Additionally, efficient arithmetic operations are required to handle the large factorials and powers involved in the computation.
+To implement the Chudnovsky algorithm, you can use a loop or recursion to iterate through the terms of the series and sum them up. Keep in mind that the algorithm's convergence improves as more terms are added to the sum. Additionally, efficient arithmetic operations are required to handle the large factorials and powers involved in the computation.
 
 ## Conclusion
 
-Both algoritms are designed tp help compute a strong numerical approximation of $π$. With chudnovsky method deminstrating a rapid convergence to the solution $π$. In our code we demand a minimum of 1,000 digits precision.
+Both algorithms are designed to help compute a strong numerical approximation of $π$. The Chudnovsky method demonstrates a rapid convergence to the solution $π$. In our code, we demand a minimum of 1,000-digit precision.
