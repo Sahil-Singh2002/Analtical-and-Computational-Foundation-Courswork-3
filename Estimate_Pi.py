@@ -3,6 +3,7 @@ import sympy
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Rectangle
 
+# Function for output of points and count how many of them.
 def estimate_pi_monte_carlo(Ntotal):
     if not isinstance(Ntotal, int) or Ntotal <= 0:
         raise ValueError("Ntotal must be a positive integer")
@@ -39,6 +40,8 @@ def draw_monte_carlo(Ntotal):
 
 draw_monte_carlo(250)
 
+
+# Algorithm to approximate pi 10^4 digits. A very long computation but very effient. 
 def estimate_pi_chudnovsky(n):
     if not isinstance(n, int) or n <= 0:
         raise ValueError("n must be a positive integer")
